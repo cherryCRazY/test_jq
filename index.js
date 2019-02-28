@@ -38,9 +38,15 @@ $$.factory = function(selector) {
 Object.setPrototypeOf($$.factory.prototype, $$.prototype);
 
 //Checking
-console.log($$("#test") instanceof $$);
-console.log($$("#test") instanceof Array);
-console.log($$("#test").hide() instanceof $$);
-console.log($$("#test").addClass("red") instanceof Array);
-console.log($$("li").addClass("red"));
-console.log($$("li").map(el => el));
+console.log("$$(#test) instanceof $$", $$("#test") instanceof $$);
+console.log("$$(#test) instanceof Array", $$("#test") instanceof Array);
+console.log(
+    '$$("#test").hide() instanceof $$',
+    $$("#test").hide() instanceof $$
+);
+console.log(
+    '$$("#test").hide() instanceof Array',
+    $$("#test").hide() instanceof Array
+);
+console.log('$$("li").addClass("red")', $$("li").addClass("red"));
+console.log("$$(li).map(el => el)", $$("li").map(el => el));
